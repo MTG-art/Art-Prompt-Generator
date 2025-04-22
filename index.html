@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Prompt Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Art Prompt Generator</h1>
+        
+        <div class="featured">
+            <h2>Prompt of the Day</h2>
+            <p id="dailyPrompt"></p>
+            <div id="streakBox">
+              🔥 Streak: <span id="streakCount">0 </span> days
+            </div>
+        </div>
+
+        <select id="category">
+            <option value="anime">Anime</option>
+            <option value="abstract">Abstract</option>
+            <option value="scenery">Scenery</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="designing">Design</option>
+            <option value="random">Random</option>
+        </select>
+
+        <button onclick="generatePrompt()">Generate Prompt</button>
+
+        <div id="promptBox" class="hidden">
+            <p id="promptText"></p>
+            <button onclick="copyPrompt()">Copy Prompt</button>
+            <button onclick="sharePrompt()">Share Prompt</button>
+        </div>
+    </div>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
+
+
+
+
