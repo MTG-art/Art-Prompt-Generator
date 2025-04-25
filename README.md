@@ -26,4 +26,4 @@ I created this tool to make the first step easier — and to support other stude
 - Add more genres and theme filters
 - Enable users to submit their own prompts
 
-Feel free to use the generator and share it with other artists! :)
+Feel free to use the generator and share it with other artists :)
