@@ -24,6 +24,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Prompt Generator</title>
     <link rel="stylesheet" href="style.css">
+     <h1 style="text-align:center; font-family:Arial;">Art Prompt Generator</h1>
+    <h3 style="text-align:center; font-family:Arial,sans-serif; color: #444;">Feeling stuck? Click on the 'Generate Prompt' button 
+     and get an art idea right away!!</h3>
 </head>
 <body>
 
@@ -34,7 +37,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
     <div class="container">
-        <h1>Art Prompt Generator</h1>
+       
         
         <div class="featured">
             <h2>Prompt of the Day</h2>
@@ -55,6 +58,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <button class="generate-btn" 
                 onclick="generatePrompt()">Generate Prompt</button>
+
+        
+        <p id="promptCounter" style="text-align: center; font-family: Arial, sans-serif; color: #444; margin-top: 10px;">Prompts generated: 0</p>
 
         <div id="promptBox" class="hidden">
             <p id="promptText"></p>
