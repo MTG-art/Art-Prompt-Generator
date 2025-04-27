@@ -195,6 +195,16 @@ const featuredPrompts = [
     "Paint a sunset scene at a beach."
 ];
 
+let promptCount = localStorage.getItem('promptCount') || 0;
+
+// When page loads, show the current count
+document.addEventListener("DOMContentLoaded", function() {
+    const counterElement = document.getElementById('promptCounter');
+    if (counterElement) {
+        counterElement.innerText = `Prompts generated: ${promptCount}`;
+    }
+});
+
 function generatePrompt() {
     const category = document.getElementById('category').value;
     let prompt;
@@ -215,6 +225,18 @@ function generatePrompt() {
     setTimeout(() => {
         document.body.style.backgroundColor = "#ffd1dc";
     }, 200);
+
+     // Show the prompt
+    promptText.innerText = prompt;
+    promptBox.classList.remove("hidden");
+
+    // Increase and show prompt counter
+    promptCount++;
+    localStorage.setItem('promptCount', promptCount);
+    const counterElement = document.getElementById('promptCounter');
+    if (counterElement) {
+        counterElement.innerText = `Prompts generated: ${promptCount}`;
+    }
 
     promptText.innerText = prompt;
     promptBox.classList.remove("hidden");
